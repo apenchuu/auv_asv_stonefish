@@ -185,7 +185,7 @@
 			<origin rpy="0.0 0.0 0.0" xyz="-0.7 0.4 0.14"/>
 			<!-- Max setpoint fields added to make this actuator compatible with current Stonefish schema -->
 			<specs thrust_coeff="0.52" torque_coeff="0.05" max_rpm="5000.0" max_setpoint="400.0" normalized_setpoint="true"/>
-			<propeller diameter="0.09" right="false">
+			<propeller diameter="0.09" right="true">
 				<mesh filename="girona500/propeller.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>

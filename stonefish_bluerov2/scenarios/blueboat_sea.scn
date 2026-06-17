@@ -195,14 +195,14 @@
 		<dimensions xyz="0.5 0.5 1.0"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="-2.0 -24.0 0.5"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="-2.0 -24.0 0.2"/>
 	</static>
 
 	<static name="BlueBox" type="box">
 		<dimensions xyz="0.5 0.5 1.0"/>
 		<material name="Neutral"/>
 		<look name="blue"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="-6.0 -22.0 0.5"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="-6.0 -22.0 0.2"/>
 	</static>	
 
 	<include file="$(find stonefish_bluerov2)/scenarios/sonobot.scn">

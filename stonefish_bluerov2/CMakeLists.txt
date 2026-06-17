@@ -36,6 +36,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/ardusim_patch.py
   scripts/view_camera.py
+  scripts/manual_control.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

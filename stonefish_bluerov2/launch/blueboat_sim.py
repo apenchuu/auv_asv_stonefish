@@ -1,6 +1,6 @@
 from launch_ros.actions import Node
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -31,7 +31,14 @@ def generate_launch_description():
             emulate_tty='true',
         )
 
+    # ardupilot_sitl = ExecuteProcess(
+    #     cmd=['bash', '-c', 'sim_vehicle.py --model JSON --map -L PHILL -m --streamrate=-1 --out 127.0.0.1:14550 --out 127.0.0.1:14551 --param ARMING_CHECK=0'],
+    #     cwd='/home/apenchu/hobi/ardupilot/Rover',
+    #     output='screen'
+    # )
+
     return LaunchDescription([
         launch_include,
-        ardusim_patch, 
+        ardusim_patch,
+        # ardupilot_sitl,
     ])

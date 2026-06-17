@@ -107,12 +107,28 @@ class Patch(Node):
             # pwm_setpoint_polar = np.array([(pwm[2]-1500)/400, (pwm[0]-1500)/400])
             # pwm_setpoint = np.matmul(np.linalg.pinv(TAM), pwm_setpoint_polar)    
 
-            # NOTE: OG Blueboat
-            pwm_setpoint = np.array([(pwm[0]-1500)/600, (pwm[2]-1500)/600])
-            if abs(pwm[0]-1500)<=10:
-                pwm_setpoint[0] = 0
-            if abs(pwm[2]-1500)<=10:
-                pwm_setpoint[1] = 0
+            # In SITL, ArduPilot (default Rover) outputs Steering on pwm[0] and Throttle on pwm[2].
+            # Since the blueboat uses differential drive (skid-steering), we must mix them here.
+            throttle = (pwm[2] - 1500) / 600.0
+            steering = (pwm[0] - 1500) / 600.0
+            
+            # Skid steering mixing
+            # Steering negative = Turn Left -> Left backward, Right forward
+            left_thruster = throttle + steering
+            right_thruster = throttle - steering
+            
+            # Constrain values between -1 and 1
+            left_thruster = np.clip(left_thruster, -1.0, 1.0)
+            right_thruster = np.clip(right_thruster, -1.0, 1.0)
+            
+            # Note: In blueboat.scn, the first actuator (Index 0) has y=0.26 (Left), 
+            # and the second actuator (Index 1) has y=-0.3 (Right).
+            # Therefore: Index 0 = Left Thruster, Index 1 = Right Thruster
+            pwm_setpoint = np.array([left_thruster, right_thruster])
+            
+            if abs(pwm[2]-1500)<=10 and abs(pwm[0]-1500)<=10:
+                pwm_setpoint[0] = 0.0
+                pwm_setpoint[1] = 0.0
 
             # pwm_setpoint = np.array([(pwm[0]-1500)/400, (pwm[1]-1500)/400])
             # pwm_setpoint[1] *= -1
