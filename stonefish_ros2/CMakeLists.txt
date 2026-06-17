@@ -46,11 +46,11 @@ find_package(PCL REQUIRED) # Interferes with rosidl_generate_interfaces and thus
 
 # define libraries
 add_library(stonefish_ros2_interface SHARED
-  src/${PROJECT_NAME}/ROS2ConsoleSimulationApp.cpp
-  src/${PROJECT_NAME}/ROS2GraphicalSimulationApp.cpp
-  src/${PROJECT_NAME}/ROS2SimulationManager.cpp
-  src/${PROJECT_NAME}/ROS2ScenarioParser.cpp
-  src/${PROJECT_NAME}/ROS2Interface.cpp
+  src/stonefish_ros2/ROS2ConsoleSimulationApp.cpp
+  src/stonefish_ros2/ROS2GraphicalSimulationApp.cpp
+  src/stonefish_ros2/ROS2SimulationManager.cpp
+  src/stonefish_ros2/ROS2ScenarioParser.cpp
+  src/stonefish_ros2/ROS2Interface.cpp
 )
 target_link_libraries(stonefish_ros2_interface Stonefish::Stonefish "${cpp_typesupport_target}")
 target_include_directories(stonefish_ros2_interface
