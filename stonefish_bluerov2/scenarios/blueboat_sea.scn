@@ -66,42 +66,42 @@
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -1.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy1" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 1.5 0.05"/>
 	</static>
 
 	<static name="RedBuoy2" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -1.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy2" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 1.5 0.05"/>
 	</static>
 
 	<static name="RedBuoy3" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -1.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy3" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 1.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 1.5 0.05"/>
 	</static>
 
 	<!-- Leg 2: Right Turn -> Facing (-Y) -->
@@ -109,42 +109,42 @@
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -5.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -5.0 0.05"/>
 	</static>
 
 	<static name="GreenBuoy4" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -5.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -5.0 0.05"/>
 	</static>
 
 	<static name="RedBuoy5" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -10.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -10.0 0.05"/>
 	</static>
 
 	<static name="GreenBuoy5" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -10.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -10.0 0.05"/>
 	</static>
 
 	<static name="RedBuoy6" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -15.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="23.5 -15.0 0.05"/>
 	</static>
 
 	<static name="GreenBuoy6" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -15.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="26.5 -15.0 0.05"/>
 	</static>
 
 	<!-- Leg 3: Right Turn -> Facing (-X) -->
@@ -152,42 +152,42 @@
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -23.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -23.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy7" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -26.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="15.0 -26.5 0.05"/>
 	</static>
 
 	<static name="RedBuoy8" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -23.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -23.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy8" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -26.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="10.0 -26.5 0.05"/>
 	</static>
 
 	<static name="RedBuoy9" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="red"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -23.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -23.5 0.05"/>
 	</static>
 
 	<static name="GreenBuoy9" type="sphere">
 		<dimensions radius="0.3"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -26.5 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 -26.5 0.05"/>
 	</static>
 
 	<!-- Final Boxes -->
@@ -195,14 +195,14 @@
 		<dimensions xyz="0.5 0.5 1.0"/>
 		<material name="Neutral"/>
 		<look name="green"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="-2.0 -24.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="-2.0 -24.0 0.05"/>
 	</static>
 
 	<static name="BlueBox" type="box">
 		<dimensions xyz="0.5 0.5 1.0"/>
 		<material name="Neutral"/>
 		<look name="blue"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="-6.0 -22.0 0.2"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="-6.0 -22.0 0.05"/>
 	</static>	
 
 	<include file="$(find stonefish_bluerov2)/scenarios/sonobot.scn">

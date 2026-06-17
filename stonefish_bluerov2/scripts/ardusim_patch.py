@@ -121,12 +121,13 @@ class Patch(Node):
             left_thruster = np.clip(left_thruster, -1.0, 1.0)
             right_thruster = np.clip(right_thruster, -1.0, 1.0)
             
-            # Note: In blueboat.scn, the first actuator (Index 0) has y=0.26 (Left), 
-            # and the second actuator (Index 1) has y=-0.3 (Right).
-            # Therefore: Index 0 = Left Thruster, Index 1 = Right Thruster
-            pwm_setpoint = np.array([left_thruster, right_thruster])
-            
-            if abs(pwm[2]-1500)<=10 and abs(pwm[0]-1500)<=10:
+            # Note: In sonobot.scn, the first actuator (Index 0) is ThrusterSurgeStarboard (Right), 
+            # and the second actuator (Index 1) is ThrusterSurgePort (Left).
+            # Therefore: Index 0 = Right Thruster, Index 1 = Left Thruster
+            pwm_setpoint = np.array([right_thruster, left_thruster])
+            # If SITL is disarmed, it often sends 0 for PWM. 
+            # Or if it's perfectly neutral (1500), we also want to stop.
+            if pwm[2] == 0 or pwm[0] == 0 or (abs(pwm[2]-1500)<=10 and abs(pwm[0]-1500)<=10):
                 pwm_setpoint[0] = 0.0
                 pwm_setpoint[1] = 0.0
 
