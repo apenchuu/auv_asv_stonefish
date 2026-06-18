@@ -196,7 +196,7 @@
 				<thrust_coeff forward="0.167" reverse="0.167"/>
 				<torque_coeff value="0.016"/>
 			</thrust_model>
-		</actuator>
+		</actuator>c
 
 		<actuator name="ThrusterSurgePort" type="thruster">
 			<link name="base_link"/>
