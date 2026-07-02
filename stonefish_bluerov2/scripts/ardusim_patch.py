@@ -109,8 +109,8 @@ class Patch(Node):
 
             # In SITL, ArduPilot (default Rover) outputs Steering on pwm[0] and Throttle on pwm[2].
             # Since the blueboat uses differential drive (skid-steering), we must mix them here.
-            throttle = (pwm[2] - 1500) / 600.0
-            steering = (pwm[0] - 1500) / 600.0
+            throttle = -(pwm[2] - 1500) / 600.0
+            steering = -(pwm[0] - 1500) / 600.0
             
             # Skid steering mixing
             # Steering negative = Turn Left -> Left backward, Right forward
@@ -124,12 +124,15 @@ class Patch(Node):
             # Note: In sonobot.scn, the first actuator (Index 0) is ThrusterSurgeStarboard (Right), 
             # and the second actuator (Index 1) is ThrusterSurgePort (Left).
             # Therefore: Index 0 = Right Thruster, Index 1 = Left Thruster
-            pwm_setpoint = np.array([right_thruster, left_thruster])
+            # We negate right_thruster because we set right="false" in sonobot.scn, making it a left-handed propeller!
+            pwm_setpoint = np.array([-right_thruster, left_thruster, 0.0, 0.0])
             # If SITL is disarmed, it often sends 0 for PWM. 
             # Or if it's perfectly neutral (1500), we also want to stop.
             if pwm[2] == 0 or pwm[0] == 0 or (abs(pwm[2]-1500)<=10 and abs(pwm[0]-1500)<=10):
                 pwm_setpoint[0] = 0.0
                 pwm_setpoint[1] = 0.0
+                # pwm_setpoint[2] = 0.0  # Commented out so it spins constantly for test
+                # pwm_setpoint[3] = 0.0  # Commented out so it spins constantly for test
 
             # pwm_setpoint = np.array([(pwm[0]-1500)/400, (pwm[1]-1500)/400])
             # pwm_setpoint[1] *= -1
@@ -138,6 +141,10 @@ class Patch(Node):
 
         # print([pwm[2], pwm[0]])
         # print("{:.2f} {:.2f}".format(pwm_setpoint[0], pwm_setpoint[1]))
+
+        # Docking Logic
+        # Bow (1,1) -> Ke kiri
+        # Bow (-1,-1) -> Ke kanan
 
         # print(pwm_setpoint)
         msg_pwm = Float64MultiArray(data=pwm_setpoint)

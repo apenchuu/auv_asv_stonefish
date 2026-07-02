@@ -61,6 +61,28 @@
 		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 6.0"/>
 	</static>
 
+	<!-- Custom Red Buoys (Sejajar Posisi Awal, di Samping Kiri Kapal, Vertikal/Maju) -->
+	<static name="RedBuoyCustom1" type="sphere">
+		<dimensions radius="0.3"/>
+		<material name="Neutral"/>
+		<look name="red"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 -1.5 0.05"/>
+	</static>
+
+	<static name="RedBuoyCustom2" type="sphere">
+		<dimensions radius="0.3"/>
+		<material name="Neutral"/>
+		<look name="red"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="1.5 -1.5 0.05"/>
+	</static>
+
+	<static name="RedBuoyCustom3" type="sphere">
+		<dimensions radius="0.3"/>
+		<material name="Neutral"/>
+		<look name="red"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="3.0 -1.5 0.05"/>
+	</static>
+
 	<!-- Leg 1: Straight (+X) -->
 	<static name="RedBuoy1" type="sphere">
 		<dimensions radius="0.3"/>
