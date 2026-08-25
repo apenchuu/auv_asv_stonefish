@@ -56,23 +56,23 @@ class TeleopBlueboat(Node):
                     continue
 
                 if key == 'w':
-                    # Forward
-                    self.cmd_starboard = self.speed
+                    # Forward: Starboard (CCW) = negative, Port (CW) = positive
+                    self.cmd_starboard = -self.speed
                     self.cmd_port = self.speed
                     print("\rForward", end="")
                 elif key == 's':
-                    # Backward
-                    self.cmd_starboard = -self.speed
+                    # Backward: Starboard (CW) = positive, Port (CCW) = negative
+                    self.cmd_starboard = self.speed
                     self.cmd_port = -self.speed
                     print("\rBackward", end="")
                 elif key == 'a':
-                    # Turn Left (CCW) -> Right Fwd (Port), Left Back (Starboard)
-                    self.cmd_starboard = -self.speed
+                    # Turn Left: Starboard Back (CW) = positive, Port Fwd (CW) = positive
+                    self.cmd_starboard = self.speed
                     self.cmd_port = self.speed
                     print("\rLeft", end="")
                 elif key == 'd':
-                    # Turn Right (CW) -> Left Fwd (Starboard), Right Back (Port)
-                    self.cmd_starboard = self.speed
+                    # Turn Right: Starboard Fwd (CCW) = negative, Port Back (CCW) = negative
+                    self.cmd_starboard = -self.speed
                     self.cmd_port = -self.speed
                     print("\rRight", end="")
                 elif key == ' ':
